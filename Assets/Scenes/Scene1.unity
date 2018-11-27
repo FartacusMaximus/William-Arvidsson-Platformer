@@ -195,7 +195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2ac040dabfe4146af9bdae0686ffa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimumScoreNeeded: 0
   sceneLoad: Scene1
 --- !u!1001 &116762384
 Prefab:
@@ -248,6 +247,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4125286841741052, guid: 30bb5c59abad1214dbcece960ab91980,
     type: 2}
   m_PrefabInternal: {fileID: 116762384}
+--- !u!1 &129107778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1075172054117250, guid: 5b7fb2da8134ad5409e0241c75077e51,
+    type: 2}
+  m_PrefabInternal: {fileID: 568835260}
+--- !u!114 &129107779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129107778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bed2e4a81d84fa47a5163bdea978d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimumScoreNeeded: 0
+  sceneLoad: Scene1
 --- !u!1001 &149995045
 Prefab:
   m_ObjectHideFlags: 0
@@ -371,7 +388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2ac040dabfe4146af9bdae0686ffa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimumScoreNeeded: 0
   sceneLoad: Scene1
 --- !u!1001 &199130874
 Prefab:
@@ -17817,7 +17833,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114991104902707246, guid: 5b7fb2da8134ad5409e0241c75077e51, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5b7fb2da8134ad5409e0241c75077e51, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &616770716
@@ -17930,10 +17947,6 @@ Prefab:
     - target: {fileID: 4346574277537802, guid: e424ac99f94ba2e408434b014ad9e2e6, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4346574277537802, guid: e424ac99f94ba2e408434b014ad9e2e6, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e424ac99f94ba2e408434b014ad9e2e6, type: 2}
@@ -18155,7 +18168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2ac040dabfe4146af9bdae0686ffa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimumScoreNeeded: 0
   sceneLoad: Scene1
 --- !u!212 &936451399
 SpriteRenderer:
@@ -18383,7 +18395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2ac040dabfe4146af9bdae0686ffa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimumScoreNeeded: 0
   sceneLoad: Scene1
 --- !u!1 &1130262848
 GameObject:
@@ -18870,7 +18881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2ac040dabfe4146af9bdae0686ffa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimumScoreNeeded: 0
   sceneLoad: Scene1
 --- !u!1001 &1170581423
 Prefab:
@@ -19039,8 +19049,8 @@ Transform:
   m_Children:
   - {fileID: 286563804}
   - {fileID: 1870003782}
-  - {fileID: 43099980}
   - {fileID: 80811589}
+  - {fileID: 43099980}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19363,13 +19373,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4751532350085290, guid: 8c5b9638d7d56ad4294c4d95f7caab7b, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.6171875
+    - target: {fileID: 61099956139960396, guid: 8c5b9638d7d56ad4294c4d95f7caab7b,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.0107623115
       objectReference: {fileID: 0}
-    - target: {fileID: 4751532350085290, guid: 8c5b9638d7d56ad4294c4d95f7caab7b, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 3.003125
+    - target: {fileID: 61099956139960396, guid: 8c5b9638d7d56ad4294c4d95f7caab7b,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.4700002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c5b9638d7d56ad4294c4d95f7caab7b, type: 2}
