@@ -5,7 +5,12 @@ using UnityEngine;
 public class RockMove : MonoBehaviour
 {
 
-    // Use this for initialization
+    public Transform rockPosition;
+    public Transform pickupPosition;
+    public Transform dropLocation;
+    public BoxCollider2D rockCollider;
+    public bool isHolding = false;
+
     void Start()
     {
 
@@ -14,16 +19,30 @@ public class RockMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (isHolding == true)
+        {
+            rockPosition.position = pickupPosition.position;
+        }
+        if (isHolding == true && Input.GetKeyDown(KeyCode.F))
+        {
+            isHolding = false;
+            rockCollider.enabled = true;
+            rockPosition.position = dropLocation.position;
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (isHolding == false && Input.GetKeyUp(KeyCode.F))
             {
-                print("böhj");
+                {
+                    isHolding = true;
+                    rockCollider.enabled = false;
+                }
+
             }
+
         }
     }
 }

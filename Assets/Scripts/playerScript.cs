@@ -12,12 +12,17 @@ public class playerScript : MonoBehaviour
     //A private variable which lets me edit the players Rigidbody2D within this script
     private Rigidbody2D rbody;
     //A Variable which is linked to the groundCheck script and this lets me call upon variables from the groundCheck
-    public groundCheck groundcheck;
+    public groundCheck groundCheck;
+    public Transform playerPos;
+    
+    private float playerScale = 0.75f;
+
     // Use this for initialization
     void Start()
     {
         //Looks for a Rigidbody2D in the object that the script is attached to
         rbody = GetComponent<Rigidbody2D>();
+        playerPos = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -28,9 +33,18 @@ public class playerScript : MonoBehaviour
         //When the assigned jump key is pressed and the player is grounded the player will jump based on jumpSpeed
         if (Input.GetButtonDown("Jump"))
         {
-            if(groundcheck.isGrounded == true)
-            rbody.velocity = new Vector2(rbody.velocity.x, jumpSpeed);
+            if(groundCheck.touching > 0)
+            {
+                rbody.velocity = new Vector2(rbody.velocity.x, jumpSpeed);
+            }
         }
-
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            playerPos.localScale = new Vector3(-playerScale, playerPos.localScale.y,1);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            playerPos.localScale = new Vector3(playerScale, playerPos.localScale.y,1);
+        }
     }
 }
