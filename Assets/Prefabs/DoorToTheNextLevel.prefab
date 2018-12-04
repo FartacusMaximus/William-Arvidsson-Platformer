@@ -80,7 +80,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.21426678}
@@ -109,6 +109,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevelLocation: {fileID: 4324689825104322}
   player: {fileID: 0}
+  doorOpenSprite: {fileID: 212330274865101498, guid: c660a2394441865458dab7612c4f2231,
+    type: 2}
+  pressurePlate: {fileID: 0}
+  doorClosedSprite: {fileID: 212464104373828448, guid: 0b171e60175db0149ab80495bb0bcaa9,
+    type: 2}
 --- !u!212 &212551438626130190
 SpriteRenderer:
   m_ObjectHideFlags: 1

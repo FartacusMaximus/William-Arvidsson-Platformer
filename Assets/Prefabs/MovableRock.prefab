@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 61354095145895734}
   m_Layer: 0
   m_Name: MovableRock
-  m_TagString: Untagged
+  m_TagString: PickupAble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1218175002189018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.23, y: -0.602, z: 0}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -128,8 +128,8 @@ MonoBehaviour:
   rockPosition: {fileID: 4352411065981738}
   pickupPosition: {fileID: 0}
   dropLocation: {fileID: 0}
-  isHolding: 0
   rockCollider: {fileID: 61354095145895734}
+  isHolding: 0
 --- !u!212 &212385772693402318
 SpriteRenderer:
   m_ObjectHideFlags: 1
