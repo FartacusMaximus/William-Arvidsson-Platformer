@@ -17,6 +17,7 @@ public class LoadLevel : MonoBehaviour
         {
             Coins.score = 0;
             SceneManager.LoadScene(sceneLoad);
+
         }
     }
 }

@@ -11,13 +11,23 @@ public class RockMove : MonoBehaviour
     public BoxCollider2D rockCollider;
     public bool isHolding = false;
 
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
+    {
+        PickUpRock();
+    }
+    //When the player is inside the rock trigger collider it checks if isHolding == false and the F key is pressed the isHolding is set to true and the rock collider is disabled
+    //used GetKeyUp instead of GetKeyDown because using the same for both picking up and dropping caused me to instantly drop the rock upon picking it up.
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            DropRock();
+        }
+    }
+    //if isHolding == true then the rocks position is set to the pickup position
+    //if isHolding == true and you press the F key isHolding is set to false the rocks colider is reactivated and the rocks position is set to assigned drop pos
+    private void PickUpRock()
     {
         if (isHolding == true)
         {
@@ -30,19 +40,15 @@ public class RockMove : MonoBehaviour
             rockPosition.position = dropLocation.position;
         }
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void DropRock()
     {
-        if (collision.tag == "Player")
+        if (isHolding == false && Input.GetKeyUp(KeyCode.F))
         {
-            if (isHolding == false && Input.GetKeyUp(KeyCode.F))
             {
-                {
-                    isHolding = true;
-                    rockCollider.enabled = false;
-                }
-
+                isHolding = true;
+                rockCollider.enabled = false;
             }
-
         }
     }
 }
+

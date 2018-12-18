@@ -10,13 +10,13 @@ public class groundCheck : MonoBehaviour
     //When something enters the GroundCheckHitbox trigger the isGrounded is set to true
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        touching = touching+1;
+        touching = touching + 1;
     }
 
     //When something leaves the GroundCheckHitbox trigger the isGrounded variable is set to false
     private void OnTriggerExit2D(Collider2D collision)
     {
-        touching = touching-1;
+        touching = touching - 1;
     }
 
 }

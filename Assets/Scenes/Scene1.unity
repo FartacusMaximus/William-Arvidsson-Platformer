@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minimumScoreNeeded: 0
-  sceneLoad: Scene1
+  sceneLoad: Scene2
 --- !u!1001 &149995045
 Prefab:
   m_ObjectHideFlags: 0
@@ -17853,7 +17853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &616770717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17947,6 +17947,11 @@ Prefab:
     - target: {fileID: 4346574277537802, guid: e424ac99f94ba2e408434b014ad9e2e6, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665524513718936, guid: e424ac99f94ba2e408434b014ad9e2e6,
+        type: 2}
+      propertyPath: sceneLoad
+      value: Scene1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e424ac99f94ba2e408434b014ad9e2e6, type: 2}
@@ -18371,7 +18376,8 @@ Prefab:
       propertyPath: m_Name
       value: Spikes (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114665524513718936, guid: e424ac99f94ba2e408434b014ad9e2e6, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e424ac99f94ba2e408434b014ad9e2e6, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1054471718 stripped
@@ -19148,6 +19154,11 @@ Prefab:
       propertyPath: m_Name
       value: Spikes (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114665524513718936, guid: e424ac99f94ba2e408434b014ad9e2e6,
+        type: 2}
+      propertyPath: sceneLoad
+      value: Scene1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e424ac99f94ba2e408434b014ad9e2e6, type: 2}
   m_IsPrefabAsset: 0
@@ -19558,7 +19569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2001433125
 Transform:
   m_ObjectHideFlags: 0

@@ -25,26 +25,35 @@ public class playerScript : MonoBehaviour
         playerPos = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
+    //Makes it so when the assigned input keys for horizontal movement are pressed the player characther moves based on player moveSpeed
+    //When the assigned jump key is pressed and the player is grounded the player will jump based on jumpSpeed
     void Update()
     {
-        //Makes it so when the assigned input keys for horizontal movement are pressed the player characther moves based on player moveSpeed
         rbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") *moveSpeed, rbody.velocity.y);
-        //When the assigned jump key is pressed and the player is grounded the player will jump based on jumpSpeed
-        if (Input.GetButtonDown("Jump"))
-        {
-            if(groundCheck.touching > 0)
-            {
-                rbody.velocity = new Vector2(rbody.velocity.x, jumpSpeed);
-            }
-        }
+        HorizontalMovement();
+        Jump();
+    }
+
+
+    private void HorizontalMovement()
+    {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            playerPos.localScale = new Vector3(-playerScale, playerPos.localScale.y,1);
+            playerPos.localScale = new Vector3(-playerScale, playerPos.localScale.y, 1);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            playerPos.localScale = new Vector3(playerScale, playerPos.localScale.y,1);
+            playerPos.localScale = new Vector3(playerScale, playerPos.localScale.y, 1);
+        }
+    }
+    private void Jump()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (groundCheck.touching > 0)
+            {
+                rbody.velocity = new Vector2(rbody.velocity.x, jumpSpeed);
+            }
         }
     }
 }

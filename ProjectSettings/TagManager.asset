@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - InvisibleWall
   - PickupAble
+  - Ground
   layers:
   - Default
   - TransparentFX
